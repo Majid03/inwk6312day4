@@ -16,5 +16,18 @@ def hist(my_string):
             char_count[my_char] = 1
     return char_count
 
-my_char_count = hist("INWK63122"))
+def print_hist(my_hist):
+    """ This prints the hist """
+    if not isinstance(my_hist,dict):
+        print ("Gimme a dict")
+        return None 
+    else: 
+        for key in my_hist:
+            print ( str(key) + " -> " + str(my_hist[key]))
 
+        
+
+
+
+my_char_count = hist("INWK63122")
+print_hist(my_char_count)
