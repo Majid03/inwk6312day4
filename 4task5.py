@@ -1,3 +1,6 @@
+#import my own file
+import task
+
 # This opens a file
 my_file = open("words.txt")
 # This creates a empty list
@@ -8,5 +11,9 @@ for line in my_file:
     #append the stripped word to the wordlist
     word_list.append(line.strip())
 
-print (len(word_list))
+for index in range(len(word_list)):
+    my_hist = task.hist(word_list[index])
+    task.print_hist(my_hist)
+    
+    
 
